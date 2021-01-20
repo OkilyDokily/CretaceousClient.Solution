@@ -1,0 +1,15 @@
+@model CretaceousClient.Models.Animal
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(x => x.AnimalId)
+  @Html.LabelFor(x => x.Name)
+  @Html.EditorFor(x => x.Name)
+  @Html.LabelFor(x => x.Species)
+  @Html.EditorFor(x => x.Species)
+  @Html.LabelFor(x => x.Age)
+  @Html.EditorFor(x => x.Age)
+  @Html.LabelFor(x => x.Gender)
+  @Html.EditorFor(x => x.Gender)
+  <input type="submit" value="Edit">
+}

@@ -1,0 +1,16 @@
+<ul>
+  <li>ID: @Model.AnimalId</li>
+  <li>Name: @Model.Name</li>
+  <li>Species: @Model.Species</li>
+  <li>Age: @Model.Age</li>
+  <li>Gender: @Model.Gender</li>
+</ul>
+
+<div>
+  @using (Html.BeginForm("Delete", "Animals", new { id = @Model.AnimalId }, FormMethod.Post))
+  {
+    <input type="submit" value="Delete">
+  }
+</div>
+
+@Html.ActionLink("Edit","Edit","Animals",new {id = @Model.AnimalId})
